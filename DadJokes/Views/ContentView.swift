@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    // Mark: Stored properties
+    var currentJoke: DadJoke = DadJoke(id: "", joke: "Knock,knock...", status: 0)
     var body: some View {
         VStack {
             
-            Text("How do you organize a space party? You planet.")
+            Text(currentJoke.joke)
                 .multilineTextAlignment(.leading)
                 .padding(30)
                 .overlay(
